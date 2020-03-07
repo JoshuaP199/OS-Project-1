@@ -1,18 +1,18 @@
-/**
- * A pthread program illustrating how to
- * create a simple thread and some of the pthread API
- * This program implements the summation function where
- * the summation operation is run as a separate thread.
- *
- * Most Unix/Linux/OS X users
- * gcc thrd-posix.c -lpthread
- *
- * Figure 4.11
- *
- * @author Gagne, Galvin, Silberschatz
- * Operating System Concepts  - Tenth Edition
- * Copyright John Wiley & Sons - 2018
- */
+/*
+  A pthread program illustrating how to
+  create a simple thread and some of the pthread API
+  This program implements the summation function where
+  the summation operation is run as a separate thread.
+ 
+  Most Unix/Linux/OS X users
+  gcc thrd-posix.c -lpthread
+ 
+  Figure 4.11
+ 
+  @author Gagne, Galvin, Silberschatz
+  Operating System Concepts  - Tenth Edition
+  Copyright John Wiley & Sons - 2018
+*/
 
 #include <pthread.h>
 #include <stdio.h>
@@ -27,13 +27,13 @@ int main(int argc, char *argv[])
 pthread_t tid; /* the thread identifier */
 pthread_attr_t attr; /* set of attributes for the thread */
 
-if (argc != 2) {
+if (argc != 2) {		//ERROR LOOP
 	fprintf(stderr,"usage: a.out <integer value>\n");
 	/*exit(1);*/
 	return -1;
 }
 
-if (atoi(argv[1]) < 0) {
+if (atoi(argv[1]) < 0) {	//ERROR LOOP
 	fprintf(stderr,"Argument %d must be non-negative\n",atoi(argv[1]));
 	/*exit(1);*/
 	return -1;
@@ -43,18 +43,19 @@ if (atoi(argv[1]) < 0) {
 pthread_attr_init(&attr);
 
 /* create the thread */
-pthread_create(&tid,&attr,runner,argv[1]);
+pthread_create(&tid,&attr,runner,argv[1]); //modify with argv[2] ???
 
 /* now wait for the thread to exit */
 pthread_join(tid,NULL);
 
 printf("sum = %d\n",sum);
+//printf("sum of %d to %d = %d\n", NEED TO FIGURE OUT WHAT VARIABLES GO HERE ); 
 }
 
-/**
- * The thread will begin control in this function
- */
-void *runner(void *param) 
+/*
+  The thread will begin control in this function
+*/
+void *runner(void *param) //NEED TO MODIFY THIS ??? (NOT SURE)
 {
 int i, upper = atoi(param);
 sum = 0;
