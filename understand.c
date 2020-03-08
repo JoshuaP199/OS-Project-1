@@ -22,6 +22,7 @@ int main(int argc, char *argv[]) {
     pthread_attr_t attr;
     printf("argc %d\n", argc);      // argc reads the positions this helps with the error loop from the main program so it functions correctly
     printf("argv[1] %s\n", argv[1]);   //reads the actual input from the user depending on the position starting at [int]
+                                       //argv[2] = M & argv[1] = N
 
     pthread_attr_init(&attr);    //defaults
 
