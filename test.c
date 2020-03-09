@@ -4,7 +4,7 @@
 int sum = 0;
 int finalSUM = 0;
 int M = 8, N = 256, lb = 1, ub = 0;
-char a[8];
+char a[8]; //check array on Chegg
  
 int q, rem;
 
