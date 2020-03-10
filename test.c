@@ -29,16 +29,12 @@ void main(){
         a[0] = 0;
         a[ i ] = sum;
         lb = ub +1;
-        //FOR SOME REASON LAST NUMBER IS WRONG IT GIVES 264 INSTEAD OF 256, MOST LIKELY HAS TO DO WITH UPPER BOUND OR Q 
-        //NEED TO FIGURE OUT HOW TO FIX THE ARRAY SO IT HAS THE CORRECT NUMBERS (MOST LIKELY NEED POINTERS)
+       
     }
     for(int g=1; g<M+1; g++){
         int point = a[g];
-        printf("point = %d\n", point);
         finalSUM = finalSUM + point;
-        printf("finalSUM = %d\n", finalSUM);
     }
-    //printf("lb = %d\n", lb);      **
     
     //use the array stated earlier ^ and add those to get the total sum
     printf("sum of 1 to %d = %d", ub, finalSUM);
