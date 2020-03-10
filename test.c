@@ -4,7 +4,7 @@
 int sum = 0;
 int finalSUM = 0;
 int M = 8, N = 256, lb = 1, ub = 0;
-//char a[8];  //Check array on Chegg
+char *a[8];  //Check array on Chegg
  
 int q, rem;
 
@@ -26,18 +26,18 @@ void main(){
             //printf("sum = %d\n", sum);
         }
         printf("sum of %d to %d = %d\n", cur, ub, sum);
-        //a[0] = 0;
-        //a[ i ] = sum;
+        a[0] = 0;
+        a[ i ] = sum;
         lb = ub +1;
         //FOR SOME REASON LAST NUMBER IS WRONG IT GIVES 264 INSTEAD OF 256, MOST LIKELY HAS TO DO WITH UPPER BOUND OR Q 
         //NEED TO FIGURE OUT HOW TO FIX THE ARRAY SO IT HAS THE CORRECT NUMBERS (MOST LIKELY NEED POINTERS)
     }
-    /*for(int g=1; g<M+1; g++){
+    for(int g=1; g<M+1; g++){
         int point = a[g];
         printf("point = %d\n", point);
         finalSUM = finalSUM + point;
         printf("finalSUM = %d\n", finalSUM);
-    }*/
+    }
     //printf("lb = %d\n", lb);      **
     
     //use the array stated earlier ^ and add those to get the total sum
