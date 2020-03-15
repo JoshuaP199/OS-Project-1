@@ -13,4 +13,4 @@ test.c --> main file for testing out things before uploading it to workingtest1.
 
 Chegg_Ex.c --> Chegg's answer to the problem to use as a reference
 
-Python EC file --> Contains files of the python version for extra credit
+Python EC Folder --> Contains files of the python version for extra credit
