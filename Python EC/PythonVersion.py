@@ -15,9 +15,9 @@ for i in range(M):
         for p in range((N-lb)+1):
             sum = sum + (lb+p)
     else:
-         ub = lb + q
+         ub = lb + (q-1)
          sum = 0
-         for p in range(q+1):
+         for p in range(q):
              sum = sum + (lb+p)
     print("sum of ", lb, " to ", ub, " = ", sum)
     lb = ub +1
