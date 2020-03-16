@@ -16,7 +16,7 @@ def runner(X, Y, Z):
         print(holder)
     else:
         sum = 0
-        for p in range(q+1):
+        for p in range(q):
             sum = sum + (lb+p)
         print("sum of ", lb, " to ", ub, " = ", sum)
         holder += sum
@@ -31,7 +31,7 @@ if __name__ == "__main__":
             print(lb, " ", ub)
         elif (i == M-1):
             ub = N
-            lb = (ub - (q+rem))
+            lb = (ub - (q+rem)+1)
             print(lb, " ", ub)
         else:
             lb = 1 + (q*i)
