@@ -27,7 +27,6 @@ void main(int argc, char *argv[]){
    for(int i = 1; i < M+1; i++){  
       printf("\n"); 
       pthread_create(&tid,&attr,runner,&a[i]);
-      //finalSUM += sum;
       lb = ub +1;
    }
 
@@ -44,11 +43,7 @@ void *runner(){
    for(int p = 0; p <= q; p++){   
       sum = sum + (lb+p);
    }
-   printf("");
    printf("sum of %d to %d = %d\n", cur, ub, sum);
-   
-   //printf("c = %d --- sum of %d to %d = %d\n", c, cur, ub, sum);
-   //c++;
    finalSUM += sum; //MOST INCONSISTANT
 
 	pthread_exit(0);
