@@ -25,7 +25,6 @@ void main(int argc, char *argv[]){
    rem = N%M;       
 
    for(int i = 1; i < M+1; i++){  
-      printf("\n"); 
       pthread_create(&tid,&attr,runner,&a[i]); 
       lb = ub +1;
       pthread_join(tid,NULL);
