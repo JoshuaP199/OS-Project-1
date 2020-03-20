@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int sum, finalSUM = 0;
-int lb = 1, ub = 0, c = 1; 
+int lb = 1, ub = 0; 
 int q, rem, p, M, N, holder;
 
 void *runner(int, /*int,*/ int, int, int, int);
