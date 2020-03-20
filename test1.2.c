@@ -10,9 +10,9 @@ void *runner(int, /*int,*/ int, int, int, int);
 
 void main(int argc, char *argv[]){
    pthread_t tid;
-   pthread_attr_t attr;
+   pthread_attr_t attr; 
 
-   //pthread_attr_init(&attr);   
+   //pthread_attr_init(&attr);  #HONESTLY DONT THINK WE NEED THIS
 
    int N , M;
    N = atoi(argv[1]);
@@ -56,6 +56,7 @@ void main(int argc, char *argv[]){
       //printf("ENDi = %d", i);
    }
    printf("\nFINALsum of 1 to %d = %d\n", N, holder); //NOT DISPLAYING
+   pthread_exit(0);
 }
 
 void *runner(int lb,/* int ub,*/ int i, int q, int M, int N){
@@ -88,7 +89,7 @@ void *runner(int lb,/* int ub,*/ int i, int q, int M, int N){
       //printf("i4 = %d\n", i);
    }
 // PLACE 2
-	//pthread_exit(NULL);
+	//pthread_exit(0); #HAVE A EXIT IN MAIN THAT WORKS
 }
 
 /*       PLACE 1
