@@ -34,6 +34,7 @@ void main(int argc, char *argv[]){
       pthread_join(tid,NULL);
    }
    printf("\nFINALsum of 1 to %d = %d\n", N, holder);
+   pthread_exit(0);
 }
 
 void *runner(void *param){
