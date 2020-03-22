@@ -9,10 +9,10 @@ int q, rem, p, M, N, holder;
 void *runner(void *param);
 
 void main(int argc, char *argv[]){
-   pthread_t tid;
-
+ 
    N = atoi(argv[1]);
    M = atoi(argv[2]);
+   pthread_t tid[M];
  
    q = (N/M);   
    rem = N%M;       
@@ -30,8 +30,8 @@ void main(int argc, char *argv[]){
          lb = 1 + (q*i);
          ub = lb + (q-1);
       }
-      pthread_create(&tid,NULL,runner,&i);
-      pthread_join(tid,NULL);
+      pthread_create(&tid[i],NULL,runner,&i);
+      pthread_join(tid[i],NULL);
    }
    printf("\nFINALsum of 1 to %d = %d\n", N, holder);
    pthread_exit(0);
