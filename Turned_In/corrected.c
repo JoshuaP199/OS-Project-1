@@ -36,7 +36,6 @@ void main(int argc, char *argv[]){
       pthread_join(tid[i],NULL);
    }
    printf("\nFINALsum of 1 to %d = %d\n", N, holder);
-   pthread_exit(0);
 }
 
 void *runner(void *param){
@@ -57,4 +56,5 @@ void *runner(void *param){
       printf("R2sum of %d to %d = %d\n", lb, ub, sum);
       holder += sum;
    }
+   pthread_exit(0);
 }
