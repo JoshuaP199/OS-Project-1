@@ -10,19 +10,11 @@ void *runner(void *param);
 
 void main(int argc, char *argv[]){
    pthread_t tid;
-   //pthread_attr_t attr; 
 
-   //pthread_attr_init(&attr);
-
-   //int N , M;
    N = atoi(argv[1]);
    M = atoi(argv[2]);
-
-   //int a[M];
-
-   //int q = (N/M); 
+ 
    q = (N/M);   
-   
    rem = N%M;       
 
    for(int i = 0; i < M; i++){ 
@@ -62,5 +54,4 @@ void *runner(void *param){
       printf("R2sum of %d to %d = %d\n", lb, ub, sum);
       holder += sum;
    }
-	//pthread_exit(0);
 }
