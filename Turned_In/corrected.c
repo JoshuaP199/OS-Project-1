@@ -9,6 +9,8 @@ int q, rem, p, M, N, holder;
 void *runner(void *param);
 
 void main(int argc, char *argv[]){
+   pthread_attr_t attr;
+   pthread_attr_init(&attr);
  
    N = atoi(argv[1]);
    M = atoi(argv[2]);
@@ -30,7 +32,7 @@ void main(int argc, char *argv[]){
          lb = 1 + (q*i);
          ub = lb + (q-1);
       }
-      pthread_create(&tid[i],NULL,runner,&i);
+      pthread_create(&tid[i],&attr,runner,&i);
       pthread_join(tid[i],NULL);
    }
    printf("\nFINALsum of 1 to %d = %d\n", N, holder);
