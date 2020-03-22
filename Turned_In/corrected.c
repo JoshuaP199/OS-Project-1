@@ -38,8 +38,8 @@ void main(int argc, char *argv[]){
    printf("\nFINALsum of 1 to %d = %d\n", N, holder);
 }
 
-void *runner(void *param){
-   int i=*(int *)param;
+void *runner(void *param){ //Function pointer named runner with its arugments as the pointer of param
+   int i=*(int *)param;  //* points to the param, int * indicates that the pointed param has to be an int
    if(i == M-1){
       sum = 0;
       for (int p = 0; p < ((N-lb)+1); p++){
