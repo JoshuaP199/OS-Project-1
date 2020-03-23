@@ -21,7 +21,6 @@ def runner(X, Y, Z):
             sum = sum + (lb+p)
         print("sum of ", lb, " to ", ub, " = ", sum)
         holder += sum
-    #return holder
     
 if __name__ == "__main__": 
     for i in range(M):
