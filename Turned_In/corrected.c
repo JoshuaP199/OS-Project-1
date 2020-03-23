@@ -38,10 +38,8 @@ void main(int argc, char *argv[]){
    printf("\nFINALsum of 1 to %d = %d\n", N, holder);
 }
 
-void *runner(void *param){ //Function pointer named runner with its arugments as the pointer of param
-   //LINK: https://stackoverflow.com/questions/14203084/what-does-mean-methodvoid-param-in-c
-   int i=*(int *)param;  //(*) points to the param, (int *) indicates that the pointed param passed must be an int
-   //LINK: http://www.cse.cuhk.edu.hk/~ericlo/teaching/os/lab/9-PThread/Pass.html
+void *runner(void *param){
+   int i=*(int *)param; 
    if(i == M-1){
       sum = 0;
       for (int p = 0; p < ((N-lb)+1); p++){
