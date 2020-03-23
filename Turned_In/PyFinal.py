@@ -3,7 +3,6 @@ import threading
 N = int(input("Number to use in summation: "))
 M = int(input("Number of threads to use: "))
 
-#global holder
 holder = 0
 q = (N//M)
 rem = N%M
@@ -38,6 +37,5 @@ if __name__ == "__main__":
         a1= threading.Thread(target=runner, args=(lb,ub,i)) 
         a1.start()
         a1.join() 
-        #holder += holder
     print('Sum of 1 to ', N, ' = ', holder)
     print("Done!") 
